@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.0",
     "mysql2": "^3.10.3",
     "nodemon": "^3.1.4",
     "sequelize": "^6.37.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js",
+    "dev": "SET NODE_ENV=development&&nodemon index.js",
+    "prod": "SET NODE_ENV=production&&nodemon index.js",
+    "db-migrate-in-dev-env": "SET NODE_ENV=development&&sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
