@@ -41,7 +41,10 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-sequelize.sync({alter:true,force: true})
-
+sequelize.sync({alter:true,force: config.forceSync}).then( () => {
+    console.log('Yes Re-Synced Database & tables created!');
+}).catch(err => {
+    console.error('error connecting: '+ err); 
+  });
 
 module.exports = db;

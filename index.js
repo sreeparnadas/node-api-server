@@ -12,17 +12,6 @@ app.get('/', (req,res) => {
 })
 
 
-
-sequelize.sync({
-    force: config.forceSync || false, // Default to false if not specified
-    alter: config.alterSync || false, // Default to false if not specified
-    match: new RegExp(config.syncMatchPattern || '.*') // Default to match all models if not specified
-  }).then(() => {
-    console.log('Yes Re-Sync Database & tables created!');
-  }).catch(err => {
-    console.error('error connecting: '+err); 
-  });
-
 app.listen(port, async () => {
     console.log(`app listening on port ${port}`)
 })
