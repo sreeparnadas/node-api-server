@@ -16,7 +16,7 @@
     "db-migrate-in-dev-env": "SET NODE_ENV=development&&sequelize db:migrate"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sreeparna Das",
   "license": "ISC",
   "description": ""
 }

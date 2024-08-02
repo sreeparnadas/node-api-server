@@ -14,6 +14,7 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
 // Debug: Verify sequelize instance creation
 // console.log("Sequelize instance created:", sequelize);
 
@@ -40,11 +41,5 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-sequelize.sync({alter:true,force: config.forceSync}).then( () => {
-    console.log('Yes Re-Synced Database & tables created!');
-}).catch(err => {
-    console.error('error connecting: '+ err); 
-  });
 
 module.exports = db;
