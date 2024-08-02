@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'course_id',
         constraints: true
       })
+      Syllabus.hasMany(models.Question,{
+        foreignKey: 'syllabus_id',
+        constraints: true
+      })
     }
   }
   Syllabus.init({

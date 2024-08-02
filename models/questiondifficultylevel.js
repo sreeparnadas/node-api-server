@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      QuestionDifficultyLevel.hasMany(models.Question,{
+        foreignKey: 'question_difficulty_level_id',
+        constraints: true
+      })
     }
   }
   QuestionDifficultyLevel.init({
