@@ -57,3 +57,9 @@ const QuestionType = models.QuestionType
 
 12. Select field in get method
 https://stackoverflow.com/a/69854954/26549614
+
+
+xampp issue 
+1. Change password: https://stackoverflow.com/questions/24566453/resetting-mysql-root-password-with-xampp-on-localhost
+
+2. mysql stopped sometimes: https://www.youtube.com/watch?v=84IOtc05TuA
