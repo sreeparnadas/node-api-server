@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'QuestionDifficultyLevel',
     tableName: 'question_difficulty_levels',
-    underscored: true
+    underscored: true,
+    timestamps: true
   });
   return QuestionDifficultyLevel;
 };

@@ -2,6 +2,7 @@ const questionTypeController = require('../controllers/questionTypeController')
 const questionDifficultyLevelController = require('../controllers/questionDifficultyLevelController')
 const courseController = require('../controllers/courseController')
 const syllabusController = require('../controllers/syllabusController')
+const userController = require('../controllers/userController')
 
 const router = require('express').Router();
 
@@ -43,5 +44,11 @@ router.post('/syllabuses', syllabusController.create);
 router.get('/syllabuses/:id', syllabusController.getById);
 router.put('/syllabuses/:id', syllabusController.update);
 router.delete('/syllabuses/:id', syllabusController.delete);
+
+
+// users
+router.get('/users', userController.getAll);
+router.post('/users', userController.create);
+router.post('/users/login', userController.login);
 
 module.exports = router

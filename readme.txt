@@ -22,7 +22,7 @@ Successfully created seeders folder at project_path
 =====================================
 
 6. Create model: 
-sequelize model:generate --name questionLevel --attributes level_name:string
+sequelize model:generate --name QuestionLevel --attributes level_name:string
 
 sequelize model:generate --name QuestionType --attributes type_name:string,short_form:string
 
@@ -57,6 +57,11 @@ const QuestionType = models.QuestionType
 
 12. Select field in get method
 https://stackoverflow.com/a/69854954/26549614
+
+13. bcrypt
+https://www.weblearningblog.com/nodejs/simple-login-and-registration-with-expressjs-sequelize-bcrypt-and-jwt/
+https://heynode.com/blog/2020-04/salt-and-hash-passwords-bcrypt/
+
 
 
 xampp issue 
